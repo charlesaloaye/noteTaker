@@ -1,0 +1,22 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "title": "How to swim here",
+            "body": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque illo aliquam molestias, exercitationem ducimus culpa magni, laboriosam suscipit harum nihil, reiciendis debitis error nemo corporis! Eius explicabo voluptatibus dolor ut?"
+
+        },
+        {
+            "id": 2,
+            "title": "How to swim here 2",
+            "body": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque illo aliquam molestias, exercitationem ducimus culpa magni, laboriosam suscipit harum nihil, reiciendis debitis error nemo corporis! Eius explicabo voluptatibus dolor ut?"
+
+        },
+        {
+            "id": 3,
+            "title": "How to swim here 3",
+            "body": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque illo aliquam molestias, exercitationem ducimus culpa magni, laboriosam suscipit harum nihil, reiciendis debitis error nemo corporis! Eius explicabo voluptatibus dolor ut?"
+
+        }
+    ]
+}
