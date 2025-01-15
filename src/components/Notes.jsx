@@ -4,12 +4,12 @@ import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import NoteContext from "../context/NoteContext";
 const Notes = () => {
-  const { notes } = useContext(NoteContext);
+  const { notes, loading } = useContext(NoteContext);
   return (
     <>
-      {notes.map((note) => {
-        return (
-          <Card key={note.id}>
+      {!loading &&
+        notes.map((note, index) => (
+          <Card key={index}>
             <div className='py-5 flex items-start justify-between'>
               <div className='flex gap-3'>
                 <div className='text-start'>
@@ -30,8 +30,7 @@ const Notes = () => {
               </Link>
             </div>
           </Card>
-        );
-      })}
+        ))}
     </>
   );
 };
