@@ -11,6 +11,7 @@ export const NoteContextProvider = ({ children }) => {
     fetchNotes();
   }, []);
 
+  // Fetch all notes
   const fetchNotes = async () => {
     try {
       const res = await axios.get("/api/notes");
@@ -21,6 +22,7 @@ export const NoteContextProvider = ({ children }) => {
     }
   };
 
+  // Fetch a single note
   const fetchNote = async (id) => {
     try {
       const res = await axios.get(`/api/notes/${id}`);
@@ -30,6 +32,7 @@ export const NoteContextProvider = ({ children }) => {
     }
   };
 
+  // Delete note
   const deleteNote = async (id) => {
     try {
       await axios.delete(`/api/notes/${id}`);
@@ -40,6 +43,7 @@ export const NoteContextProvider = ({ children }) => {
     }
   };
 
+  // Add a note
   const addNote = async (note) => {
     try {
       await axios.post("/api/notes", note);
