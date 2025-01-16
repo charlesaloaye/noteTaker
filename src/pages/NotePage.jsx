@@ -5,14 +5,19 @@ import { useContext, useEffect } from "react";
 import { FaTrash } from "react-icons/fa";
 
 const NotePage = () => {
+  // Get the note, fetchNote and deleteNote from the context
   const { note, fetchNote, deleteNote } = useContext(NoteContext);
   const navigate = useNavigate();
+  // Get the id from the URL
   const { id } = useParams();
+
   useEffect(() => {
-    fetchNote(id);
-  }, []);
+    // Fetch the note when the component mounts
+    if (id) fetchNote(id);
+  }, [id]);
 
   const handleDelete = async (e) => {
+    // prevent default form submission
     e.preventDefault();
 
     const confirm = window.confirm(
@@ -22,8 +27,9 @@ const NotePage = () => {
     if (!confirm) {
       alert("Note not deleted");
     }
-    await deleteNote(note.id);
 
+    await deleteNote(note.id);
+    // Navigate once note is deleted
     navigate("/");
   };
   if (!note) {
