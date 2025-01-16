@@ -16,22 +16,24 @@ const AddPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    // Prevent default form submission
     e.preventDefault();
-
+    // Check if title and body are empty
     if (!title.trim() || !body.trim()) {
       setError(true);
       setMessage("Please enter body and title of note");
       return;
     }
-
+    // Create a new note
     const newNote = {
       title,
       body,
     };
-
+    // Add the note
     await addNote(newNote);
-    setSuccess(true);
 
+    setSuccess(true);
+    //    // Navigate to home page
     navigate("/");
   };
   return (
